@@ -1,9 +1,11 @@
-const promise = new Promise((resolve) => {
-  setTimeout(function () {
-    resolve("Ready");
-  }, 2000);
-});
-promise.then((result) => {
+function delayedPromise() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Ready");
+    }, 2000);
+  });
+}
+delayedPromise().then((result) => {
   alert(result);
   console.log(result);
 });
